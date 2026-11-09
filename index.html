@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Grazy 3D – kreative 3D-Druckprodukte, Gadgets und individuelle Designs.">
+  <title>Grazy 3D – Kreativ gedruckt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">KREATIV GEDRUCKT. EINZIGARTIG DEINS. <span>✦</span> GRAZY 3D</div>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="Grazy 3D Startseite"><span class="brand-mark">G</span><span>GRAZY<span class="brand-accent">3D</span></span></a>
+    <nav><a href="#shop">Shop</a><a href="#about">Über uns</a><a href="#ai-studio">KI-Designstudio</a><a href="#contact">Kontakt</a></nav>
+    <button class="cart-button" id="open-cart" aria-label="Warenkorb öffnen">Warenkorb <span id="cart-count">0</span></button>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> IDEEN WERDEN REALITÄT</div>
+        <h1>MAKE IT<br><span>GRAZY.</span></h1>
+        <p class="hero-lead">Coole Gadgets. Kreative Deko. Individuelle 3D-Drucke. Entdecke Dinge, die nicht jeder hat.</p>
+        <div class="hero-actions"><a class="button primary" href="#shop">Produkte entdecken <span>↗</span></a><a class="text-link" href="#custom">Eigene Idee anfragen →</a></div>
+        <div class="hero-note"><span>✳</span> Mit Liebe Schicht für Schicht gefertigt.</div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-sticker">PRINT<br>YOUR<br>WORLD</div>
+        <div class="hero-product"><div class="product-emoji">🐉</div><div class="hero-product-label">FLEXI DRAGON <small>3D PRINTED / GRAZY ORIGINAL</small></div></div>
+        <div class="floating-chip chip-one">100% kreativ</div><div class="floating-chip chip-two">Layer by layer ✦</div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Shop-Vorteile"><div>3D GEDRUCKT <b>✳</b> BESONDERE DESIGNS <b>✳</b> DEINE IDEE, DEIN PRINT <b>✳</b> 3D GEDRUCKT <b>✳</b> BESONDERE DESIGNS <b>✳</b></div></section>
+
+    <section class="section shop-section" id="shop">
+      <div class="section-heading"><div><div class="eyebrow">DER GRAZY SHOP</div><h2>Fidget it.<br><span>Feel good.</span></h2></div><p>Von klassischen Fidget Toys bis zu ausgefallenen 3D-Druckideen – finde deinen neuen Lieblingsbegleiter.</p></div>
+      <div class="filters" id="filters">
+        <button class="filter active" data-filter="Alle">Alles</button><button class="filter" data-filter="Clicker">Clicker</button><button class="filter" data-filter="Slider">Slider</button><button class="filter" data-filter="Cubes">Cubes</button><button class="filter" data-filter="Flexi Toys">Flexi Toys</button><button class="filter" data-filter="Deko">Deko & mehr</button>
+      </div>
+      <div class="product-grid" id="product-grid"></div>
+      <p class="demo-note">Beispielprodukte zur Vorschau – bitte vor Veröffentlichung durch deine echten Produkte, Fotos und Preise ersetzen.</p>
+    </section>
+
+
+    <section class="ai-section" id="ai-studio">
+      <div class="ai-intro">
+        <div class="eyebrow">GRAZY AI LAB · DEINE IDEE WIRD EIN DESIGN</div>
+        <h2>DENK ES DIR.<br><span>PRINT ES DIR.</span></h2>
+        <p>Beschreibe dein eigenes Fidget Toy oder 3D-Produkt. Du schickst uns deine Idee per E-Mail, wir prüfen sie und melden uns mit den nächsten Schritten für ein individuelles Modell.</p>
+        <div class="ai-steps"><span>01 · Idee beschreiben</span><span>02 · Design abstimmen</span><span>03 · 3D-Druck bestellen</span></div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-card-head"><span class="ai-orb">✳</span><div><strong>GRAZY DESIGN STUDIO</strong><small>PERSONALIZED 3D CREATION</small></div><span class="ai-status">BETA</span></div>
+        <label for="ai-prompt">Was sollen wir für dich entwerfen?</label>
+        <textarea id="ai-prompt" rows="4" placeholder="z. B. Einen kompakten Fidget-Clicker in Schwarz mit roten Zahnrädern und einem coolen Sci-Fi-Look ..."></textarea>
+        <div class="ai-fields">
+          <label>Produktart<select id="ai-type"><option>Fidget Toy</option><option>Figur / Flexi Toy</option><option>Deko</option><option>Praktischer Alltagshelfer</option><option>Etwas ganz anderes</option></select></label>
+          <label>Wunschfarbe<input id="ai-color" type="text" placeholder="z. B. Schwarz / Neon-Grün"></label>
+        </div>
+        <button class="button primary ai-submit" id="ai-submit">Meine Designidee anfragen <span>↗</span></button>
+        <p class="ai-disclaimer">Hinweis: Das Designstudio ist aktuell eine Anfrage-Funktion. Eine automatische KI-Erstellung mit STL/3MF-Export ist noch nicht aktiv.</p>
+        <div class="ai-result" id="ai-result" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="feature-band" id="about">
+      <div class="feature-art"><div class="big-cube">✳</div><div class="small-cube">G3D</div></div>
+      <div class="feature-copy"><div class="eyebrow">WILLKOMMEN BEI GRAZY 3D</div><h2>Mehr als nur<br><span>Plastik in Form.</span></h2><p>Wir lieben kreative Ideen und die Möglichkeiten des 3D-Drucks. Aus digitalen Entwürfen entstehen praktische Alltagshelfer, besondere Deko und kleine Unikate.</p><div class="feature-points"><span>✦ Kreative Designs</span><span>✦ Auf Bestellung gefertigt</span><span>✦ Individuelle Wünsche willkommen</span></div></div>
+    </section>
+
+    <section class="custom-section" id="custom">
+      <div class="custom-inner"><div class="eyebrow">DU HAST EINE IDEE?</div><h2>DEINE IDEE.<br><span>UNSER DRUCK.</span></h2><p>Du suchst eine bestimmte Farbe, ein persönliches Geschenk oder hast eine eigene 3D-Datei? Erzähl uns davon – wir melden uns bei dir.</p><a class="button light" href="#ai-studio">Wunschdruck anfragen ↗</a></div>
+      <div class="custom-symbol">G<span>3D</span></div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div><div class="eyebrow">FRAGEN? IDEEN? FEEDBACK?</div><h2>Lass uns<br><span>reden.</span></h2></div>
+      <div class="contact-card"><p>Du hast Fragen zu einem Produkt oder möchtest etwas Individuelles anfertigen lassen? Schreib uns gerne.</p><a class="contact-email" id="contact-email" href="#contact">ferdinand_Reisnecker@icloud.com ↗</a></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">G</span><span>GRAZY<span class="brand-accent">3D</span></span></a><span>© <span id="year"></span> Grazy 3D · Mit Kreativität gedruckt.</span><div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></footer>
+
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Warenkorb">
+    <div class="cart-head"><h3>Dein Warenkorb</h3><button id="close-cart" aria-label="Warenkorb schließen">✕</button></div>
+    <div class="cart-items" id="cart-items"><p class="empty-cart">Noch nichts drin. Zeit, etwas Grazy zu entdecken!</p></div>
+    <div class="cart-bottom"><div class="cart-total"><span>Zwischensumme</span><strong id="cart-total">0,00 €</strong></div><p>Versandkosten werden individuell bestätigt.</p><button class="button primary checkout" id="checkout">Bestellung anfragen <span>↗</span></button><small>Dies ist eine unverbindliche Bestellanfrage, keine direkte Online-Zahlung.</small></div>
+  </aside>
+  <script src="script.js"></script>
+</body>
+</html>
